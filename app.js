@@ -6,10 +6,10 @@ var bodyParser=require('body-parser')
 const Productmodel=mongoose.model("productdetails",
 
 {
-    productname:String,
+    pname:String,
     itemcode:String,
     quality:String,
-    sellername:String,
+    sname:String,
     price:String
     
 
@@ -51,10 +51,10 @@ res.send('hello');
 
 app.post('/Product',function(req,res){
 
- var productname=req.body.productname
+ var pname=req.body.pname
  var itemcode=req.body.itemcode
  var quality=req.body.quality
- var sellername=req.body.sellername
+ var sname=req.body.sname
  var price=req.body.price
  
 
@@ -83,16 +83,16 @@ var result=Productmodel.find( (error,data)=>{
     })
 
 app.post('/update',(req,res)=>{
-var productname=req.body.productname;
+var pname=req.body.pname;
 var itemcode=req.body.itemcode;
 var quality=req.body.quality;
-var sellername=req.body.sellername;
+var sname=req.body.sname;
 var price=req.body.price;
-var result=Productmodel.findByIdAndUpdate(id,{"productname":productname,"itemcode":itemcode,"quality":quality,"sellername":sellername,"price":price},(error,data)=>{
+var result=Productmodel.findByIdAndUpdate(id,{"pname":pname,"itemcode":itemcode,"quality":quality,"sname":sname,"price":price},(error,data)=>{
 
     if(error){
         throw error;
-}
+} 
 else{
     res.send("succesfully Updated" + data);
 }
