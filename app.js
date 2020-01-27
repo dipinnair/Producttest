@@ -106,7 +106,11 @@ app.post('/remove',(req,res)=>{
             newFunction(error)
         }
         else{
+<<<<<<< HEAD
             res.send(data);
+=======
+            res.send;
+>>>>>>> fcf63a13eb98aad5848b4c9bcc7f82ce57362c8b
         }
     })
 })
