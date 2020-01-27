@@ -106,7 +106,7 @@ app.post('/remove',(req,res)=>{
             newFunction(error)
         }
         else{
-            res.send("succesfully removed" + data);
+            res.send;
         }
     })
 })
