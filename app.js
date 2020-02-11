@@ -101,7 +101,7 @@ else{
 })
 app.post('/remove',(req,res)=>{
 
-    
+    var id=req.body.id;
     var result=Productmodel.findByIdAndRemove( id,(error,data)=>{
         if(error){
             newFunction(error)
