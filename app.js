@@ -88,6 +88,7 @@ var itemcode=req.body.itemcode;
 var quality=req.body.quality;
 var sname=req.body.sname;
 var price=req.body.price;
+var id=req.body.id;
 var result=Productmodel.findByIdAndUpdate(id,{"pname":pname,"itemcode":itemcode,"quality":quality,"sname":sname,"price":price},(error,data)=>{
 
     if(error){
